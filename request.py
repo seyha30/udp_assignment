@@ -8,7 +8,7 @@ is_send = True
 counter = 1
 while is_send:
     start = None
-    if counter <= 6:
+    if counter <= 10:
         string = input('Please input message :  ')
         client_socket.sendto(str.encode(string),('localhost',20001))
         start = time.time()
@@ -23,7 +23,7 @@ while is_send:
     print(client_socket.recvfrom(1024))
     end = time.time()
     elapsed = end - start
-    print('elapsed ===  ', elapsed)
+    print('Elapsed time ===  ', elapsed)
     counter += 1
 file.close()
     
